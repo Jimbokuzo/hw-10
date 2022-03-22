@@ -1,0 +1,112 @@
+body {
+background: black;
+font-family:Arial, Helvetica, sans-serif;
+}
+p{
+    font-weight: bold;
+}
+button {
+    cursor: pointer;
+}
+h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+.accordion {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+.accordion-header{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 20px;
+    background: white;
+}
+.accordion-dropdown {
+    
+    height: 300px;
+    margin-top: 15px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.accordion-dropdown.hide{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s;
+}
+.accordion-dropdown.show {
+    overflow: hidden;
+    max-height: 500px;
+    transition: max-height 1s;
+}
+.arrow{
+    cursor: pointer;
+}
+.arrow.hide{
+    transform: rotate(0deg);
+    transition: transform 1s;
+}
+.arrow.show {
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+.avatar {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+    background: url(./img/avatar.png) no-repeat center 20px white;
+    background-size: 100%;
+    border-radius: 20px;
+}
+.block-content{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.block-content2 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.inn,
+.name,
+.age,
+.email,
+.city,
+.gender {
+    width: 230px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background: white;
+    border-radius: 25px;
+}
+.main{
+    background-image: linear-gradient(
+        to bottom right,
+        #4affde 0%, #5b9dff 40%, #d06bff 60%, #ff34d2 100%
+    );
+    background-size: 200% 200%;
+    animation: movingGradient 6s linear infinite alternate;
+}
+@keyframes movingGradient{
+    from { background-position: 0 0;}
+    to {background-position: 100% 100%; }
+}
+.borRad{
+    border-radius: 20px;
+}
