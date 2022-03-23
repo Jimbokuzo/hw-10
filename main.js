@@ -86,41 +86,42 @@ toggle(contentHTML)
 
 function toggle() {
   var accordeonBody = document.querySelector(".accordion-dropdown")
-  var accordeonArrow = document.querySelector(".arrow")
   var content = accordeonBody.classList.contains("hide")
   if (content) {
     accordeonBody.classList.replace("hide", "show")
   } else {
     accordeonBody.classList.replace("show", "hide")
   }
-  var arrowHTML = accordeonArrow.classList.contains("hide")
+
+  var accordeonArrow = document.querySelector(".arrow")
+  var arrowHTML = accordeonArrow.classList.contains("close")
   if (arrowHTML) {
-    accordeonArrow.classList.replace("hide", "show")
+    accordeonArrow.classList.replace("close", "open")
   } else {
-    accordeonArrow.classList.replace("show", "hide")
+    accordeonArrow.classList.replace("open", "close")
   }
 }
 
 function accordeon(data, node) {
-  for (var use of data) {
+  for (var user of data) {
     var sectionHTML = document.createElement("section")
     sectionHTML.className = "accordion"
     sectionHTML.innerHTML = `  
-      <div class="accordion-header borRad">
-        <h2>${use.name}</h2>
-        <div><img class="arrow hide" src="./img/arrow.png" alt=""></div>
+      <div class="accordion-header">
+        <h2>${user.name}</h2>
+        <div><img class="arrow close" src="./img/arrow.png" alt=""></div>
       </div>
-      <div class="accordion-dropdown hide main borRad">
+      <div class="accordion-dropdown hide main">
           <div class="avatar"></div>
           <div class="block-content">
-            <div class="inn"><p>inn</p>: ${use.inn}</div>
-            <div class="name"><p>name</p>: ${use.name}</div>
-            <div class="age"><p>age</p>: ${use.age}</div>
+            <div class="inn"><p>inn</p>: ${user.inn}</div>
+            <div class="name"><p>name</p>: ${user.name}</div>
+            <div class="age"><p>age</p>: ${user.age}</div>
           </div>
           <div class="block-content2">
-            <div class="email"><p>email</p>: ${use.email}</div>
-            <div class="city"><p>city</p>: ${use.city}</div>
-            <div class="gender"><p>gender</p>: ${use.gender}</div>
+            <div class="email"><p>email</p>: ${user.email}</div>
+            <div class="city"><p>city</p>: ${user.city}</div>
+            <div class="gender"><p>gender</p>: ${user.gender}</div>
           </div>
       </div>
     `
