@@ -60,7 +60,7 @@ h2{
 .block-content,
 .block-content2 {
     display: flex;
-    width: 250px;
+    max-width: 250px;
     height: 300px;
     margin-right: 50px;
     padding: 10px 10px 10px 10px;
