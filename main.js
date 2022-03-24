@@ -85,9 +85,10 @@ var contentHTML = document.querySelector(".content")
 accordeon(users, contentHTML)
 
 function toggle(){
-  var accordeonBody = document.querySelector(".accordion-dropdown")
+  var accordeonBody = this.closest(".accordion").querySelector(".accordion-dropdown")
   accordeonBody.classList.toggle('show')
-  var accordeonArrow = document.querySelector(".arrow")
+
+  var accordeonArrow = this.closest(".accordion").querySelector(".arrow")
   accordeonArrow.classList.toggle('open')
 }
 
